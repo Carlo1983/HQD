@@ -1,0 +1,42 @@
+.tab_ric tbody tr, .tab_ric tbody td:hover{
+	cursor:pointer;
+}
+
+.tab_ric tbody tr.even:hover, .tab_ric tbody tr.even td.highlighted {
+	background-color: #ECFFB3;
+}
+
+.tab_ric tbody tr.odd:hover, .tab_ric tbody tr.odd td.highlighted {
+	background-color: #E6FF99;
+}
+
+.tab_ric tr.even:hover {
+	background-color: #ECFFB3;
+}
+
+.tab_ric tr.even:hover td.sorting_1 {
+	background-color: #DDFF75;
+}
+
+.tab_ric tr.even:hover td.sorting_2 {
+	background-color: #E7FF9E;
+}
+
+.tab_ric tr.even:hover td.sorting_3 {
+	background-color: #E2FF89;
+}
+
+.tab_ric tr.odd:hover {
+	background-color: #E6FF99;
+}
+
+.tab_ric tr.odd:hover td.sorting_1 {
+	background-color: #D6FF5C;
+}
+
+.tab_ric tr.odd:hover td.sorting_2 {
+	background-color: #E0FF84;
+}
+
+.tab_ric tr.odd:hover td.sorting_3 {
+	background-color: #DBFF70;

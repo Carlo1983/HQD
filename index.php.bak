@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php require('gestione/dbmanager.php'); $manager_sql = new dbManager();?>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script>
+
+
+$(function(){
+	
+	$('#btn_login').click(
+		function(){
+			var dati = $('#form_login_operatore').formSerialize();
+			$.post('gestione/verifica_login_operatore.php', dati, function(data){
+				if(data=='1'){
+					//alert('Login Ok');
+					window.location.href = 'riepilogo.php';
+				}
+                                else if(data=='2'){
+                                    window.location.href = 'segreteria.php';
+                                }
+				else{
+					//alert('Errore');
+					$('#error_msg').fadeIn();
+				}
+				//
+				//location.reload();
+			});
+		}	
+	)
+	
+	
+
+})
+</script>
+
+<style>
+	#error_msg {
+		font-size:14px;
+		color:#FF6600;
+		text-align:left;
+		display:none
+	}
+</style>
+
+</head>
+<body>
+
+<div id="container">
+
+
+
+<?php header('location: login.php'); ?>
+<?php
+
+include('top.php'); ?>
+
+<div id="div_login">
+
+<p id="error_msg"> Errore nel Login</p>
+<br />
+<form action="" method="post" id="form_login_operatore">
+<table>
+<tr><td align="left" width="50">Nome: </td><td width="20"></td> <td align="left" width="300"><input type="text" name="nome" id="nome"/></td></tr>
+<tr><td align="left" width="50">Password: </td><td width="20"></td> <td align="left" width="300"><input type="password" name="psw" /></td></tr>
+<tr><td colspan="3" align="left"><input type="button" value="Login"  id="btn_login"/></td></tr>
+</table>
+</form>
+</div>
+
+</div>
+
+
+</body>
+</html>
