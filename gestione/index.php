@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head><!-- MODIFICA A CAZZO -->
 	<meta charset="utf-8">
 	<?php
 		require ('dbmanager.inc.php');
