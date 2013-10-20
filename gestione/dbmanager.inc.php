@@ -6,7 +6,7 @@
     $cnt_arr_tipo = count($tipo_arr);
 
 
-	class dbManager{
+	class dbManager extends mysqli{
 		private $user = 'hqd';
 		private $pass = 'hqd';
 		private $db_name = 'hqd_schede_lavoro';
