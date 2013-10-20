@@ -1,7 +1,7 @@
 <!--MODIFICA-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!--  QUESTO È IL MIO COMMENTO  -->
+<!--  QUESTO È IL MIO COMMENTO IN SECONDA BATTUTA -->
 
 <?php 
     require('gestione/dbmanager.inc.php'); //qui si avvia la sessione
